@@ -1,75 +1,113 @@
-# 🏛️ LegalWise AI - Legal Document Analyzer
+# 🧠 LegalWise AI (v2)
 
-A Node.js web application that uses AWS Bedrock (Claude AI) to analyze legal documents, providing summaries, clause breakdowns, risk assessments, and suggested questions.
+**LegalWise AI** is a simple, open-source legal document analyzer powered by **AWS Bedrock (Claude v2)**. It extracts legal insights from PDF documents, summarizes content, flags risks, and generates questions — all through a minimal Node.js and HTML frontend.
 
-## ✨ Features
+> ⚡️ Built with simplicity: No React, no Tailwind — just HTML + Node.js.
 
-- **Document Upload**: Upload PDF legal documents for analysis
-- **Country-Specific Analysis**: Select jurisdiction for relevant legal context
-- **AI-Powered Analysis**: Uses Anthropic Claude via AWS Bedrock
-- **Comprehensive Results**: 
-  - Document summary
-  - Clause-by-clause breakdown
-  - Risk level assessment (Low/Medium/High)
-  - Suggested questions for each clause
-- **Modern UI**: Clean, responsive HTML interface
+---
 
-## 🚀 Quick Start
+## 🔍 Features
 
-### Prerequisites
+- Upload **PDF legal documents**
+- Choose **country** for local context (South Africa, US, UK, Nigeria, etc.)
+- Extract text and **summarize** clauses using Claude AI
+- Highlight **risks**, generate **questions**, and identify **key clauses**
+- Fully open-source and developer-friendly
 
-- Node.js 16+ installed
-- AWS account with Bedrock access
-- AWS CLI configured or environment variables set
+---
 
-### Installation
+## 📸 Preview
 
-1. **Clone/Create the project structure:**
+![screenshot](docs/legalwise-ui.png)
+
+---
+
+## ⚙️ Tech Stack
+
+- **Frontend**: HTML + CSS
+- **Backend**: Node.js + Express
+- **AI**: AWS Bedrock (Claude v2)
+- **PDF Parsing**: `pdf-parse`
+- **File Uploads**: `multer`
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repo
+
 ```bash
-mkdir legalwise-ai
+git clone https://github.com/teekaym16/legalwise-ai.git
 cd legalwise-ai
-mkdir server
-mkdir server/routes
-mkdir server/services
-mkdir server/public
-mkdir server/uploads
-```
+2. Set up AWS credentials
+Create a .env file in the server/ directory:
 
-2. **Create the files** using the provided code artifacts
+bash
+Copy
+Edit
+AWS_ACCESS_KEY_ID=your_key
+AWS_SECRET_ACCESS_KEY=your_secret
+AWS_REGION=us-east-1
+BEDROCK_MODEL_ID=anthropic.claude-v2
+⚠️ Claude 3.x requires different logic. This version supports claude-v2.
 
-3. **Install dependencies:**
-```bash
+3. Install dependencies
+bash
+Copy
+Edit
 cd server
 npm install
-```
-
-4. **Configure environment variables:**
-```bash
-cp .env.example .env
-# Edit .env with your AWS credentials
-```
-
-5. **Start the server:**
-```bash
+4. Start the server
+bash
+Copy
+Edit
 npm start
-# or for development:
-npm run dev
-```
+Visit http://localhost:3000
 
-6. **Open your browser:**
-```
-http://localhost:3000
-```
+🧪 Testing Claude AI
+You can test your Bedrock credentials with:
 
-## 📁 Project Structure
-
-```
+bash
+Copy
+Edit
+node test.js
+📂 Folder Structure
+pgsql
+Copy
+Edit
 legalwise-ai/
 ├── server/
-│   ├── index.js                 # Main Express server
-│   ├── package.json            # Dependencies
 │   ├── routes/
-│   │   └── analyze.js          # API endpoint for document analysis
 │   ├── services/
-│   │   ├── extractText.js      # PDF text extraction
-│   │   └── bedrockPrompt.js    #
+│   ├── uploads/
+│   ├── index.js
+│   ├── .env
+│   ├── .gitignore
+│   └── package.json
+├── public/
+│   └── index.html
+├── LICENSE
+└── README.md
+🤝 Contributing
+Feel free to fork and improve:
+
+Add multi-model support
+
+Add OCR for scanned documents
+
+Build a dashboard to save analyses
+
+All PRs welcome!
+
+🙏 Support the Creator
+If this tool helped you, consider buying me a coffee:
+
+🔗 Buy Me a Coffee via Paystack
+
+📄 License
+This project is open-source under the MIT License.
+
+👤 Author
+Takatso Martin
+GitHub: @teekaym16
+Company: Jozi Blocks

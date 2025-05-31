@@ -18,7 +18,17 @@
 
 ## 📸 Preview
 
-![screenshot](docs/legalwise-ui.png)
+Frontend - Before Analysis
+![image](https://github.com/user-attachments/assets/a22287ca-40c0-4f8c-9742-227f593fe44a)
+
+## During Document Analysis
+![image](https://github.com/user-attachments/assets/db7b80eb-f67d-4be0-a765-ce82ec7c2676)
+
+## Analysis Results
+![image](https://github.com/user-attachments/assets/be4c52b4-ca1a-49a1-82fb-6785861a9a4a)
+
+## Verdict
+![image](https://github.com/user-attachments/assets/6292734b-c594-49d4-8531-95b7c69c88b4)
 
 ---
 
